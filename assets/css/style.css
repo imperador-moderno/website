@@ -1,0 +1,203 @@
+/* .color1 { #eeac56 };
+.color2 { #c18341 };
+.color3 { #935a2b };
+.color4 { #663216 };
+.color5 { #390900 }; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "roboto", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #eeac56;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-bottom: 2px solid #390900;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    font-family: 'Black Ops One', cursive;
+    padding: 10px;
+    color: #390900;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    position: relative;
+}
+header nav ul li::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 22px;
+    background-color: #390900;
+    transition: .4s;
+}
+
+header nav ul li a {
+    padding: 20px;
+    font-size: 1.5rem;
+    color: #663216;
+    transition: .3s;
+}
+
+header nav ul li a:hover{
+    color: #390900;
+}
+
+header nav ul li:hover::after {
+    width: 50px;
+}
+
+.livros, .cursos {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.cursos {
+    margin-top: 50px;
+    border-top: 3px solid #390900;
+}
+
+.livros h1, .cursos h1 {
+    font-family: 'Black Ops One', cursive;
+    color: #390900;
+    padding: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.livros .container, .cursos .container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.livros .container .cards, .cursos .container .cards {
+    max-width: 450px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.livros .cards img, .cursos .cards img {
+    border-radius: 10px;
+}
+
+.livros .cards h2, .cursos .cards h2 {
+    color: #390900;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.livros .cards p, .cursos .cards p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #683003;
+}
+
+.livros .cards a, .cursos .cards a {
+    font-size: 1.5rem;
+    font-family: "roboto", Arial, Helvetica, sans-serif;
+    padding: 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    color: #390900;
+    background-color: #f7d2a1;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.livros .cards a:hover, .cursos .cards a:hover {
+    color: #f7d2a1;
+    background-color: #390900;
+}
+
+footer {
+    margin: 50px auto;
+    max-width: 960px;
+    border-top: 2px solid #390900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin-top: 50px;
+    color: #683003;
+    font-style: italic;
+    font-size: 1.5rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+footer p a {
+    color: #ee0505;
+    cursor: pointer;
+    border-bottom: 2px solid #ee0505;
+}
+
+@media (max-width: 950px) {
+    .livros h1,
+    .cursos h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 670px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+    header nav {
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        gap: 15px;
+    }
+    .livros h1,
+    .cursos h1 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+}
